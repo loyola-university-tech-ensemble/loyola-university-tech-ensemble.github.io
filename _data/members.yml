@@ -1,0 +1,20 @@
+- member:
+  name: David Brooke Wetzel
+  image: "david-brooke-wetzel.jpg"
+  bio: >
+    David Brooke Wetzel is currently an adjunct professor at Loyola University
+    Chicago, teaching both music and computer science courses. He is a classically
+    trained clarinetist and bass clarinetist with interests in the traditional
+    clarinet literature, contemporary music, collaborative multimedia, and
+    interactive electroacoustic music. David holds degrees in both clarinet
+    performance (DMA, University of Arizona; B.Mus. Lawrence University) and
+    computer music performance and concert production (Peabody Conservatory).
+- member: 
+  name: Griffin Moe
+  image: "gmoe.jpg"
+  bio: >
+    Griffin Moe is a computer science graduate student at Loyola University
+    Chicago studying the overlap between CS and music. Griffin wrote the
+    original syllabus for COMP122 during his undergraduate studies at Loyola.
+    His research areas include digital signal processing, functional
+    programming, and category theory.

@@ -1,0 +1,22 @@
+---
+layout: page
+title: Core Members
+---
+
+<ul class="member-list">
+  {% for member in site.data.members %}
+  <li class="member">
+    <div class="member-image-container">
+      {% if member.image %}
+      <img class="member-image" src="{{ member.image | prepend: "/images/members/" }}">
+      {% else %}
+      <img class="member-image" src="/images/members/missing.png">
+      {% endif %}
+    </div>
+    <div class="member-content">
+      <h2 class="member-name">{{ member.name }}</h2>
+      <p class="member-bio">{{ member.bio }}</p>
+    </div>
+  </li>
+  {% endfor %}
+</ul>
