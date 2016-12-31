@@ -25,19 +25,21 @@
 .site-title-container {
   display: block;
   width: 100%;
-  padding-top: 10px;
+  padding-top: 20px;
   text-align: center;
 }
 
 .site-title {
+  display: inline-block;
   padding: 20px;
+  margin: 0;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.site-title > a {
   font-size: 48px;
   font-weight: 400;
-  line-height: 150px;
   letter-spacing: 1px;
-  margin-bottom: 0;
-  
-  background-color: rgba(0,0,0,0.5);
   text-align: center;
   color: white;
 
@@ -48,17 +50,21 @@
 
 .site-nav {
   display: block;
+  margin-top: 20px;
   width: 100%;
-  line-height: 200px;
+  //line-height: 200px;
 
   .menu-icon {
     display: none;
   }
 
-  .page-link {
-    margin: 20px;
+  .page-link-container {
+    margin: 0 20px;
     padding: 20px;
     background-color: rgba(0,0,0,0.6);
+  }
+
+  .page-link {
     color: white;
     font-size: 36px;
     //line-height: $base-line-height;
@@ -74,50 +80,6 @@
     justify-content: center;
   }
 
-  @include media-query($on-palm) {
-    position: absolute;
-    top: 9px;
-    right: $spacing-unit / 2;
-    background-color: $background-color;
-    border: 1px solid $grey-color-light;
-    border-radius: 5px;
-    text-align: right;
-
-    .menu-icon {
-      display: block;
-      float: right;
-      width: 36px;
-      height: 26px;
-      line-height: 0;
-      padding-top: 10px;
-      text-align: center;
-
-      > svg path {
-        fill: $grey-color-dark;
-      }
-    }
-
-    .trigger {
-      clear: both;
-      display: none;
-    }
-
-    &:hover .trigger {
-      padding-bottom: 5px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .page-link {
-      display: block;
-      padding: 5px 10px;
-
-      &:not(:last-child) {
-        margin-right: 0;
-      }
-      margin-left: 20px;
-    }
-  }
 }
 
 
@@ -228,6 +190,22 @@
 
   a {
     color: #e3e3e3;
+  }
+
+  @include media-query($on-palm) {
+    display: inline;
+
+    > li {
+      display: inline-block;
+      margin: $spacing-unit 0;
+      width: 100%;
+    }
+
+    .post-image {
+      display: inline-block;
+      max-width: 300px;
+      margin: $spacing-unit auto;
+    }
   }
 }
 
