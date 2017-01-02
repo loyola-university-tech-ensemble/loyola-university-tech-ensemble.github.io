@@ -10,17 +10,24 @@ layout: default
     {% for post in site.posts %}
     {% if post.image %}
       <li>
-        <img class="post-image" src="{{ post.image | prepend: "/images/" }}">
+        <div class="post-col-1">
+          <img class="post-image" src="{{ post.image | prepend: "/images/" }}">
+        </div>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h2>
+        <div class="post-col-2">
+          <h2>
+            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </h2>
 
-        <span class="post-meta">
-          Posted on {{ post.date | date: "%b %-d, %Y" }} — {{ post.author }}
-        </span>
+          <span class="post-meta">
+            Posted on {{ post.date | date: "%b %-d, %Y" }} — {{ post.author }}
+          </span>
 
-        <p>{{ post.content | truncate: 200 }}</p>
+          <p>{{ post.excerpt }}</p>
+
+          <p><a href="{{ post.url | relative_url }}">Read more...</a></p>
+        </div>
+        <div class="post-col-clear"></div>
 
       </li>
       {% endif %}

@@ -11,7 +11,7 @@
 }
 
 .member-image-container {
-  width: 20%;
+  width: 200px;
   float: left;
 }
 
@@ -21,6 +21,9 @@
 }
 
 .member-content {
-  width: 75%;
-  float: right;
+  margin-left: 240px;
+}
+
+.member-clear {
+  clear: both;
 }

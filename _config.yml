@@ -1,12 +1,12 @@
 # Site settings
 title: Loyola University Technology Ensemble
-email: your-email@domain.com
+#email: your-email@domain.com
 description: >
   We are a musical collective of creating and performing with new
   technologies.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
+# twitter_username: jekyllrb
 github_username:  loyola-university-tech-ensemble
 
 # Build settings
