@@ -15,10 +15,14 @@ depending on what the lowest phrase number is. Now with the release of version
 1.1, the app will smoothly scroll to the lowest phrase number, making it
 totally hands-free!
 
+<video src="/video/score-progress-scroll.webm" loop autoplay></video>
+
 Additionally, when performers trigger phrase playback it will cause the
 indicator in the app to flash. This is will demonstrate to the audience how
 active the performers are, so if a particular performer has stopped playing
 their indicator will be dim.
+
+<video src="/video/score-progress-flash.webm" loop autoplay></video>
 
 This new release is available from our GitHub project page. If there are
 additional features you would like to add, submit an issue or contribute
