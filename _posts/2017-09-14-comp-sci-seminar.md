@@ -9,7 +9,7 @@ categories: jekyll event
 
 Core LUTE members David Wetzel and Griffin Moe are giving a seminar today for
 the Computer Science department. The seminar is on Loyola's Lakeshore Campus in
-Doyle Hall at 4:15pm. David and Griffin will be discussing the formation of LUTE,
+Cuneo Hall, rm 324, at 4:15pm. David and Griffin will be discussing the formation of LUTE,
 the philosophy of LUTE, and the timeless impact of Terry Riley's *In C*.
 
 If you are planning attending, please bring a laptop running either macOS or Windows.
