@@ -4,7 +4,7 @@ title:  "Fall 2016 Launchpad Instrument Teardown"
 author: "Griffin Moe"
 date:   2016-12-24 23:50:59 -0600
 image: "covers/launchpad-action-f16.png"
-categories: jekyll update
+categories: update
 ---
 
 The Novation Launchpad is a MIDI controller designed to be used with Ableton

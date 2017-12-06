@@ -4,7 +4,7 @@ title:  "In C Score Progress Update - V1.1"
 author: "Griffin Moe"
 date:   2017-01-26 13:50:59 -0600
 image: "covers/in-c-progress-v11.png"
-categories: jekyll update
+categories: update
 ---
 
 For our Fall 2016 performance of Terry Riley's *In C*, we wrote a small
