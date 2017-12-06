@@ -24,7 +24,7 @@ is informal, so come and go as you please!
 
 * December 13th, 2017
 * Skowronski Music Hall (Mundelein 2nd Floor @ Lake Shore Campus)
-* Doors open at 9am, 
+* Doors open at 9am
 * Performance starts around 10:00am, performance lasts 45 minutes to 1 hour
 * Discussion follows the performance
 

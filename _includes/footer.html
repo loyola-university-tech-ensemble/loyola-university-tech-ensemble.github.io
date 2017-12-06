@@ -18,6 +18,12 @@
           </a>
         {% endif %}
 
+        {% if site.facebook_username %}
+          <a class="footer-social-media" href="https://facebook.com/{{ site.facebook_username }}">
+            <span class="fa fa-facebook fa-3x"></span>
+          </a>
+        {% endif %}
+
         {% if site.twitter_username %}
         <a class="footer-social-media" href="https://twitter.com/{{ site.twitter_username }}">
           <span class="fa fa-twitter fa-3x"></span>
