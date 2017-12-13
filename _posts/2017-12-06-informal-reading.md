@@ -33,6 +33,6 @@ event](https://www.facebook.com/events/370772626683876/).
 
 ## Downloads
 
-* [macOS](https://github.com/loyola-university-tech-ensemble/InC/releases/download/v1.0.3/In.C.for.Mac.1.0.4.dmg)
-* [Windows x64](https://github.com/loyola-university-tech-ensemble/InC/releases/download/v1.0.3/InC_App_Winx64.zip)
-* [Max source code](https://github.com/loyola-university-tech-ensemble/InC/archive/v1.0.3.zip)
+* [macOS](https://github.com/loyola-university-tech-ensemble/InC/releases/download/v.1.0.5/InC_macOS_1.0.5.dmg)
+* [Windows x64](https://github.com/loyola-university-tech-ensemble/InC/releases/download/v.1.0.5/InC_Winx64_1.0.5.zip)
+* [Max source code](https://github.com/loyola-university-tech-ensemble/InC/archive/v.1.0.5.zip)
