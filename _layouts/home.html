@@ -4,34 +4,129 @@ layout: default
 
 <div class="home">
 
+  <div class="intro-message">
+    <div class="intro-image"></div>
+    We Are:<br>
+    Loyola University<br>
+    Technology Ensemble –
+  </div>
+
+  <div class="callouts">
+    <div class="callout">
+      <div class="callout-image">
+        <img src="/images/study-day-s18.jpg">
+      </div>
+      <div class="callout-content">
+        <span class="callout-title">What is LUTE?</span>
+        <span class="callout-message">
+          <p>
+            We are a contemporary “laptop orchestra”, but our broader title
+            encapsulates our music technology research and classic ensemble
+            instrumentation.
+          </p>
+          <p>
+            We actively perform on and off campus, check out our upcoming
+            performances below.
+          </p>
+        </span>
+      </div>
+    </div>
+    <div class="callout">
+      <div class="callout-image">
+        <img src="/images/covers/in-c-app.png">
+      </div>
+      <div class="callout-content">
+        <span class="callout-title">Our Tech</span>
+        <span class="callout-message">
+          <p>
+            Our <a href='{{ '/in-c' | absolute_url }}'>In C</a> app enables
+            the performance of Terry Riley's minimalist standard <i>In C</i>
+            regardless of the musical experience.  It is currently being
+            developed into a web app.
+          </p>
+          <p>
+            The app also pairs well with the <a href='https://github.com/loyola-university-tech-ensemble/in-c-score-progress'>Progress
+              Viewer</a>, designed to visualize the current progress of an In C
+            performance typically with a projector.
+          </p>
+          <p>
+            Still curious? All of our software projects are available <a href="{{ 'projects' | absolute_url }}">here</a>.
+        </span>
+      </div>
+    </div>
+    <!-- <div class="callout">
+      <div class="callout-image">
+      <img src="/images/covers/in-c-progress-v11.png">
+      </div>
+      <div class="callout-content">
+      <span class="callout-title">Follow Us</span>
+      <span class="callout-message">
+      Join our mailing list here:
+      </span>
+      </div>
+      </div> -->
+  </div>
   {{ content }}
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-    {% if post.image %}
-      <li>
-        <div class="post-col-1">
-          <img class="post-image" src="{{ post.image | prepend: "/images/" }}">
-        </div>
-
-        <div class="post-col-2">
-          <h2>
-            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-          </h2>
-
-          <span class="post-meta">
-            Posted on {{ post.date | date: "%b %-d, %Y" }} — {{ post.author }}
-          </span>
-
-          <p>{{ post.excerpt }}</p>
-
-          <p><a href="{{ post.url | relative_url }}">Read more...</a></p>
-        </div>
-        <div class="post-col-clear"></div>
-
-      </li>
-      {% endif %}
+  <div class="post-list">
+    <h1><a href="{{ 'posts' | absolute_url }}">Recent Posts</a></h1>
+    {% for post in site.categories.update limit: 6 %}
+    <a class="post" href="{{ post.url | relative_url }}">
+      <img src="{{ post.image | prepend: '/images/' }}">
+      <div class="post-inner">
+        <h2>{{ post.title | smartify }}</h2>
+        <span class="post-meta">
+          Posted on {{ post.date | date: "%b %-d, %Y" }} — {{ post.author }}
+        </span>
+      </div>
+    </a>
     {% endfor %}
-  </ul>
+  </div>
+  <div class="events">
+    <div class="event-list upcoming">
+      {% assign upcoming_events = site.data.events | where_exp: 'event', 'event.date > site.time' | sort: 'date' | reverse %}
+      <h1>Upcoming Events</h1>
+      <p>Are you performing in an upcoming event and looking for the necessary software?</p>
+      <a class="primary-btn" href="https://github.com/loyola-university-tech-ensemble/InC">
+        Download Now
+      </a>
+      {% for event in upcoming_events %}
+      <div class="event">
+        <h2>{{ event.title }}</h2>
+        <div class="event-info">
+          <span class="fa fa-calendar"></span>
+          <span class="event-row">{{ event.date | date: "%-d %B %Y @ %I:%M%P" }}</span>
+          <span class="fa fa-map-marker"></span>
+          <span class="event-row">{{ event.location }}</span>
+          <span class="fa fa-info-circle"></span>
+          <input type="checkbox" class="read-more" id="event-read-{{ forloop.index }}" hidden>
+          <span class="event-row excerpt">{{ event.description | truncatewords: 25 }}</span>
+          <span class="event-row desc">{{ event.description }}</span>
+          <span></span><label for="event-read-{{ forloop.index }}">Read</label>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="event-list past">
+      {% assign past_events = site.data.events | where_exp: 'event', 'event.date < site.time' | sort: 'date' | reverse %}
+      <h1>Past Events</h1>
+      {% for event in past_events limit:3 %}
+      <div class="event">
+        <h2>{{ event.title }}</h2>
+        <div class="event-info">
+          <span class="fa fa-calendar"></span>
+          <span class="event-row">{{ event.date | date: "%-d %B %Y @ %I:%M%P" }}</span>
+          <span class="fa fa-map-marker"></span>
+          <span class="event-row">{{ event.location }}</span>
+          <span class="fa fa-info-circle"></span>
+          <input type="checkbox" class="read-more" id="event-read-{{ forloop.index }}" hidden>
+          <span class="event-row excerpt">{{ event.description | truncatewords: 25 }}</span>
+          <span class="event-row desc">{{ event.description }}</span>
+          <span></span><label for="event-read-{{ forloop.index }}">Read</label>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 
 </div>

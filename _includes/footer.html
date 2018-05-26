@@ -1,44 +1,35 @@
 <footer class="site-footer">
 
-  <div class="wrapper">
+  <div class="footer-col">
+    <ul class="contact-list">
+      <li><b>{{ site.title }}</b></li>
+      <li>Chicago, IL</li>
+      <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+    </ul>
+  </div>
 
-    <div class="footer-col-wrapper">
-      <div class="footer-col  footer-col-1">
-        <ul class="contact-list">
-          <li><b>{{ site.title }}</b></li>
-          <li>Chicago, IL</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
+  <div class="footer-col">
+    {% if site.github_username %}
+    <a class="footer-social-media" href="https://github.com/{{ site.github_username }}">
+      <span class="fa fa-github fa-3x"></span>
+    </a>
+    {% endif %}
 
-      <div class="footer-col  footer-col-2">
-        {% if site.github_username %}
-          <a class="footer-social-media" href="https://github.com/{{ site.github_username }}">
-            <span class="fa fa-github fa-3x"></span>
-          </a>
-        {% endif %}
+    {% if site.facebook_username %}
+    <a class="footer-social-media" href="https://facebook.com/{{ site.facebook_username }}">
+      <span class="fa fa-facebook fa-3x"></span>
+    </a>
+    {% endif %}
 
-        {% if site.facebook_username %}
-          <a class="footer-social-media" href="https://facebook.com/{{ site.facebook_username }}">
-            <span class="fa fa-facebook fa-3x"></span>
-          </a>
-        {% endif %}
+    {% if site.twitter_username %}
+    <a class="footer-social-media" href="https://twitter.com/{{ site.twitter_username }}">
+      <span class="fa fa-twitter fa-3x"></span>
+    </a>
+    {% endif %}
 
-        {% if site.twitter_username %}
-        <a class="footer-social-media" href="https://twitter.com/{{ site.twitter_username }}">
-          <span class="fa fa-twitter fa-3x"></span>
-        </a>
-        {% endif %}
-
-        <a class="footer-social-media" href="{{ "/feed.xml" | relative_url }}">
-          <span class="fa fa-rss fa-3x"></span>
-        </a>
-      </div>
-
-      <div class="footer-col  footer-col-3">
-      </div>
-    </div>
-
+    <a class="footer-social-media" href="{{ "/feed.xml" | relative_url }}">
+      <span class="fa fa-rss fa-3x"></span>
+    </a>
   </div>
 
 </footer>

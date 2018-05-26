@@ -1,0 +1,34 @@
+---
+layout: page
+title: Posts
+---
+
+<div class="post-list">
+  {% for post in paginator.posts %}
+  <a class="post" href="{{ post.url | relative_url }}">
+    <img src="{{ post.image | prepend: '/images/' }}">
+    <div class="post-inner">
+      <h2>{{ post.title | smartify }}</h2>
+      <span class="post-meta">
+        Posted on {{ post.date | date: "%b %-d, %Y" }} — {{ post.author }}
+      </span>
+    </div>
+  </a>
+  {% endfor %}
+</div>
+
+{% if paginator.total_pages > 1 %}
+  <div class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path }}" class="primary-btn previous">Previous</a>
+    {% else %}
+      <a class="primary-btn previous disabled">Previous</a>
+    {% endif %}
+    <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}" class="primary-btn next">Next</a>
+    {% else %}
+      <a class="primary-btn next disabled">Next</a>
+    {% endif %}
+  </div>
+{% endif %}

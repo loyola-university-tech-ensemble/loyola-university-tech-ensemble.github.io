@@ -38,6 +38,23 @@ $on-laptop:        800px !default;
   }
 }
 
+%no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Chrome and Opera */
+}
+
+%headliner-type {
+  font-family: 'Merriweather', serif;
+}
+
+%paragraph-type {
+  font-family: 'Open Sans', sans-serif;
+}
+
 // Import partials.
 @import
   "base",

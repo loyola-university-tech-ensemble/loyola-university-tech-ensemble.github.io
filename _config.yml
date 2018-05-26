@@ -1,8 +1,9 @@
 # Site settings
-title: Loyola University Technology Ensemble
+title: "LUTE: Loyola University Technology Ensemble"
+short_title: LUTE
 #email: your-email@domain.com
 description: >
-  We are a musical collective of creating and performing with new
+  We are a musical collective creating and performing with new
   technologies.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
@@ -13,11 +14,13 @@ github_username:  loyola-university-tech-ensemble
 # Build settings
 markdown: kramdown
 
+paginate: 6
+paginate_path: "/posts/page:num/"
+
 #gems:
 #  - jekyll-feed
 
 exclude:
   - Gemfile
   - Gemfile.lock
-  - TODO.md
   - README.md

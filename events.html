@@ -1,0 +1,47 @@
+---
+layout: page
+title: Events
+include_in_header: true
+---
+
+<div class="event-list">
+  {% assign upcoming_events = site.data.events | where_exp: 'event', 'event.date > site.time' | sort: 'date' | reverse %}
+  {% if upcoming_events != empty %}
+    {% for event in upcoming_events %}
+      <div class="event">
+        <h2>{{ event.title }}</h2>
+        <div class="event-info">
+          <span class="fa fa-calendar"></span>
+          <span class="event-row">{{ event.date | date: "%-d %B %Y @ %I:%M%P" }}</span>
+          <span class="fa fa-map-marker"></span>
+          <span class="event-row">{{ event.location }}</span>
+          <span class="fa fa-info-circle"></span>
+          <input type="checkbox" class="read-more" id="event-read-{{ forloop.index }}" hidden>
+          <span class="event-row excerpt">{{ event.description | truncatewords: 25 }}</span>
+          <span class="event-row desc">{{ event.description }}</span>
+          <span></span><label for="event-read-{{ forloop.index }}">Read</label>
+        </div>
+      </div>
+    {% endfor %}
+    {% else %}
+    <span>To Be Announced...</span>
+  {% endif %}
+  {% assign past_events = site.data.events | where_exp: 'event', 'event.date < site.time' | sort: 'date' | reverse %}
+    <h2>Past Events</h2>
+    {% for event in past_events %}
+      <div class="event">
+        <h3>{{ event.title }}</h3>
+        <div class="event-info">
+          <span class="fa fa-calendar"></span>
+          <span class="event-row">{{ event.date | date: "%-d %B %Y @ %I:%M%P" }}</span>
+          <span class="fa fa-map-marker"></span>
+          <span class="event-row">{{ event.location }}</span>
+          <span class="fa fa-info-circle"></span>
+          <input type="checkbox" class="read-more" id="event-read-{{ forloop.index }}" hidden>
+          <span class="event-row excerpt">{{ event.description | truncatewords: 25 }}</span>
+          <span class="event-row desc">{{ event.description }}</span>
+          <span></span><label for="event-read-{{ forloop.index }}">Read</label>
+        </div>
+      </div>
+    {% endfor %}
+</div>
