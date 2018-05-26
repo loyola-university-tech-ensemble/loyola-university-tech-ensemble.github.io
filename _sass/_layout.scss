@@ -244,9 +244,10 @@ body div.home {
   font-size: 15px;
 }
 
-@include media-query($on-palm) {
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
+@include media-query(600px) {
+  .site-footer {
+    grid-template-columns: 1fr;
+  }
 }
 
 .footer-heading {
@@ -274,6 +275,7 @@ body div.home {
 .contact-list {
   list-style: none;
   margin-left: 0;
+  padding-left: 0;
 }
 
 
