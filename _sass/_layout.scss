@@ -169,6 +169,7 @@ body div.home {
         display: block;
         color: #c6c6c6;
         font-size: $small-font-size;
+        & > span:not(:last-child)::after { content: ' –'; }
       }
     }
   }

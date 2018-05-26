@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Fall 2017 - Informal Reading of Terry Riley's \"In C\""
-author: "Griffin Moe"
 date:   2017-12-06 11:00:00 -0600
 image: "covers/in-c-reading.png"
 categories: event

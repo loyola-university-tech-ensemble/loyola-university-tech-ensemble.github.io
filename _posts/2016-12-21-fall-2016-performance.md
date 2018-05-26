@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "COMP122 Fall 2016 Performance"
-author: "Griffin Moe"
 date:   2016-12-21 23:50:59 -0600
 image: "covers/performance-f16.png"
 categories: update

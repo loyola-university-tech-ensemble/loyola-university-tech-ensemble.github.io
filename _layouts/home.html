@@ -70,13 +70,16 @@ layout: default
 
   <div class="post-list">
     <h1><a href="{{ 'posts' | absolute_url }}">Recent Posts</a></h1>
-    {% for post in site.categories.update limit: 6 %}
+    {% for post in site.categories.update limit: 3 %}
     <a class="post" href="{{ post.url | relative_url }}">
       <img src="{{ post.image | prepend: '/images/' }}">
       <div class="post-inner">
         <h2>{{ post.title | smartify }}</h2>
         <span class="post-meta">
-          Posted on {{ post.date | date: "%b %-d, %Y" }} — {{ post.author }}
+          <span class="date">Posted on {{ post.date | date: "%b %-d, %Y" }}</span>
+          {% if post.author %}
+          <span class="author">{{ post.author }}</span>
+          {% endif %}
         </span>
       </div>
     </a>
@@ -86,7 +89,7 @@ layout: default
     <div class="event-list upcoming">
       {% assign upcoming_events = site.data.events | where_exp: 'event', 'event.date > site.time' | sort: 'date' | reverse %}
       <h1>Upcoming Events</h1>
-      <p>Are you performing in an upcoming event and looking for the necessary software?</p>
+      <p>Are you performing with us in an upcoming event and looking for the necessary software?</p>
       <a class="primary-btn" href="https://github.com/loyola-university-tech-ensemble/InC">
         Download Now
       </a>

@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "LUC Computer Science Seminar"
-author: "Griffin Moe"
 date:   2017-09-14 11:00:00 -0600
 image: "covers/in-c-app.png"
 categories: event

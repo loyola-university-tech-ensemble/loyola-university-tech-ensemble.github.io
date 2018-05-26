@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Spring 2018 – Informal Reading of Terry Riley's \"In C\""
-author: "Griffin Moe"
 date:   2018-04-27 11:00:00 -0600
 image: "covers/in-c-phrases-excerpt.png"
 categories: event
