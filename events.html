@@ -17,8 +17,8 @@ include_in_header: true
           <span class="event-row">{{ event.location }}</span>
           <span class="fa fa-info-circle"></span>
           <input type="checkbox" class="read-more" id="event-read-{{ forloop.index }}" hidden>
-          <span class="event-row excerpt">{{ event.description | truncatewords: 25 }}</span>
-          <span class="event-row desc">{{ event.description }}</span>
+          <span class="event-row excerpt">{{ event.description | truncatewords: 25 | markdownify }}</span>
+          <span class="event-row desc">{{ event.description | markdownify }}</span>
           <span></span><label for="event-read-{{ forloop.index }}">Read</label>
         </div>
       </div>
@@ -38,8 +38,8 @@ include_in_header: true
           <span class="event-row">{{ event.location }}</span>
           <span class="fa fa-info-circle"></span>
           <input type="checkbox" class="read-more" id="event-read-{{ forloop.index }}" hidden>
-          <span class="event-row excerpt">{{ event.description | truncatewords: 25 }}</span>
-          <span class="event-row desc">{{ event.description }}</span>
+          <span class="event-row excerpt">{{ event.description | truncatewords: 25 | markdownify }}</span>
+          <span class="event-row desc">{{ event.description | markdownify }}</span>
           <span></span><label for="event-read-{{ forloop.index }}">Read</label>
         </div>
       </div>
