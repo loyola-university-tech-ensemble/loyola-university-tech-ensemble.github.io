@@ -11,14 +11,18 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 facebook_username: LoyolaUniversityTechnologyEnsemble
 github_username:  loyola-university-tech-ensemble
 
+current_incapp_win: "https://"
+current_incapp_mac: "https://github.com/loyola-university-tech-ensemble/InC/releases/download/v2.0.0/InCApp_macOS.dmg"
+
+current_projector_win: "https://github.com/loyola-university-tech-ensemble/in-c-score-progress/releases/download/v1.1.0/InCScoreProgress-win32-x64.zip"
+current_projector_mac: "https://github.com/loyola-university-tech-ensemble/in-c-score-progress/releases/download/v1.1.0/InCScoreProgress-macos-x64.dmg"
+current_projector_lin: "https://github.com/loyola-university-tech-ensemble/in-c-score-progress/releases/download/v1.1.0/InCScoreProgress-linux-x64.zip"
+
 # Build settings
 markdown: kramdown
 
 paginate: 6
 paginate_path: "/posts/page:num/"
-
-#gems:
-#  - jekyll-feed
 
 exclude:
   - Gemfile

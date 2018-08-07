@@ -9,7 +9,7 @@ include_in_header: true
   {% if upcoming_events != empty %}
     {% for event in upcoming_events %}
       <div class="event">
-        <h2>{{ event.title }}</h2>
+        <h3>{{ event.title }}</h3>
         <div class="event-info">
           <span class="fa fa-calendar"></span>
           <span class="event-row">{{ event.date | date: "%-d %B %Y @ %I:%M%P" }}</span>
