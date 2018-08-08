@@ -11,7 +11,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 facebook_username: LoyolaUniversityTechnologyEnsemble
 github_username:  loyola-university-tech-ensemble
 
-current_incapp_win: "https://"
+current_incapp_win: "https://github.com/loyola-university-tech-ensemble/InC/releases/download/v2.0.0/InC_Winx64.zip"
 current_incapp_mac: "https://github.com/loyola-university-tech-ensemble/InC/releases/download/v2.0.0/InCApp_macOS.dmg"
 
 current_projector_win: "https://github.com/loyola-university-tech-ensemble/in-c-score-progress/releases/download/v1.1.0/InCScoreProgress-win32-x64.zip"
