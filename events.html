@@ -4,12 +4,20 @@ title: Events
 include_in_header: true
 ---
 
+<div class="download-callout">
+  <p><i>Are you performing with us in an upcoming event and looking for the necessary software?</i></p>
+  <p>
+    <a class="primary-btn" href="{{ '/projects.html' | absolute_url }}">Download Now</a>
+  </p>
+</div>
+
 <div class="event-list">
   {% assign upcoming_events = site.data.events | where_exp: 'event', 'event.date > site.time' | sort: 'date' | reverse %}
   {% if upcoming_events != empty %}
+    <h2>Upcoming Events</h2>
     {% for event in upcoming_events %}
       <div class="event">
-        <h2>{{ event.title }}</h2>
+        <h3>{{ event.title }}</h3>
         <div class="event-info">
           <span class="fa fa-calendar"></span>
           <span class="event-row">{{ event.date | date: "%-d %B %Y @ %I:%M%P" }}</span>
@@ -17,8 +25,8 @@ include_in_header: true
           <span class="event-row">{{ event.location }}</span>
           <span class="fa fa-info-circle"></span>
           <input type="checkbox" class="read-more" id="event-read-{{ forloop.index }}" hidden>
-          <span class="event-row excerpt">{{ event.description | truncatewords: 25 }}</span>
-          <span class="event-row desc">{{ event.description }}</span>
+          <span class="event-row excerpt">{{ event.description | truncatewords: 25 | markdownify }}</span>
+          <span class="event-row desc">{{ event.description | markdownify }}</span>
           <span></span><label for="event-read-{{ forloop.index }}">Read</label>
         </div>
       </div>
@@ -38,8 +46,8 @@ include_in_header: true
           <span class="event-row">{{ event.location }}</span>
           <span class="fa fa-info-circle"></span>
           <input type="checkbox" class="read-more" id="event-read-{{ forloop.index }}" hidden>
-          <span class="event-row excerpt">{{ event.description | truncatewords: 25 }}</span>
-          <span class="event-row desc">{{ event.description }}</span>
+          <span class="event-row excerpt">{{ event.description | truncatewords: 25 | markdownify }}</span>
+          <span class="event-row desc">{{ event.description | markdownify }}</span>
           <span></span><label for="event-read-{{ forloop.index }}">Read</label>
         </div>
       </div>

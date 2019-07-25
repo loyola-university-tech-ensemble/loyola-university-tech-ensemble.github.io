@@ -1,0 +1,9 @@
+.project {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-column-gap: 20px;
+  margin-bottom: 60px;
+
+  & > img { align-self: center; }
+  & .primary-btn { margin-right: 10px; }
+}

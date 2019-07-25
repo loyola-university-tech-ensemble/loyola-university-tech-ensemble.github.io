@@ -6,9 +6,58 @@ layout: default
 
   <div class="intro-message">
     <div class="intro-image"></div>
-    We Are:<br>
-    Loyola University<br>
-    Technology Ensemble –
+    <div>Loyola</div>
+    <div>University</div>
+    <div>Technology</div>
+    <div>Ensemble</div>
+  </div>
+
+  <div class="events">
+    <div class="event-list upcoming">
+      {% assign upcoming_events = site.data.events | where_exp: 'event', 'event.date > site.time' | sort: 'date' | reverse %}
+      <h1>Upcoming Events</h1>
+      <p>Are you performing with us in an upcoming event and looking for the necessary software?</p>
+      <a class="primary-btn" href="{{ '/projects.html' | absolute_url }}">
+        Download Now
+      </a>
+      {% for event in upcoming_events %}
+      <div class="event">
+        <h2>{{ event.title }}</h2>
+        <div class="event-info">
+          <span class="fa fa-calendar"></span>
+          <span class="event-row">{{ event.date | date: "%-d %B %Y @ %I:%M%P" }}</span>
+          <span class="fa fa-map-marker"></span>
+          <span class="event-row">{{ event.location }}</span>
+          <span class="fa fa-info-circle"></span>
+          <input type="checkbox" class="read-more" id="event-read-{{ forloop.index }}" hidden>
+          <span class="event-row excerpt">{{ event.description | truncatewords: 25 | markdownify }}</span>
+          <span class="event-row desc">{{ event.description | markdownify }}</span>
+          <span></span><label for="event-read-{{ forloop.index }}">Read</label>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="event-list past">
+      {% assign past_events = site.data.events | where_exp: 'event', 'event.date < site.time' | sort: 'date' | reverse %}
+      <h1>Past Events</h1>
+      {% for event in past_events limit:2 %}
+      <div class="event">
+        <h2>{{ event.title }}</h2>
+        <div class="event-info">
+          <span class="fa fa-calendar"></span>
+          <span class="event-row">{{ event.date | date: "%-d %B %Y @ %I:%M%P" }}</span>
+          <span class="fa fa-map-marker"></span>
+          <span class="event-row">{{ event.location }}</span>
+          <span class="fa fa-info-circle"></span>
+          <input type="checkbox" class="read-more" id="event-read-{{ forloop.index }}" hidden>
+          <span class="event-row excerpt">{{ event.description | truncatewords: 25 | markdownify }}</span>
+          <span class="event-row desc">{{ event.description | markdownify }}</span>
+          <span></span><label for="event-read-{{ forloop.index }}">Read</label>
+        </div>
+      </div>
+      {% endfor %}
+      <a href="{{ '/events' | absolute_url }}">See more past events</a>
+    </div>
   </div>
 
   <div class="callouts">
@@ -84,52 +133,6 @@ layout: default
       </div>
     </a>
     {% endfor %}
-  </div>
-  <div class="events">
-    <div class="event-list upcoming">
-      {% assign upcoming_events = site.data.events | where_exp: 'event', 'event.date > site.time' | sort: 'date' | reverse %}
-      <h1>Upcoming Events</h1>
-      <p>Are you performing with us in an upcoming event and looking for the necessary software?</p>
-      <a class="primary-btn" href="https://github.com/loyola-university-tech-ensemble/InC">
-        Download Now
-      </a>
-      {% for event in upcoming_events %}
-      <div class="event">
-        <h2>{{ event.title }}</h2>
-        <div class="event-info">
-          <span class="fa fa-calendar"></span>
-          <span class="event-row">{{ event.date | date: "%-d %B %Y @ %I:%M%P" }}</span>
-          <span class="fa fa-map-marker"></span>
-          <span class="event-row">{{ event.location }}</span>
-          <span class="fa fa-info-circle"></span>
-          <input type="checkbox" class="read-more" id="event-read-{{ forloop.index }}" hidden>
-          <span class="event-row excerpt">{{ event.description | truncatewords: 25 }}</span>
-          <span class="event-row desc">{{ event.description }}</span>
-          <span></span><label for="event-read-{{ forloop.index }}">Read</label>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-    <div class="event-list past">
-      {% assign past_events = site.data.events | where_exp: 'event', 'event.date < site.time' | sort: 'date' | reverse %}
-      <h1>Past Events</h1>
-      {% for event in past_events limit:3 %}
-      <div class="event">
-        <h2>{{ event.title }}</h2>
-        <div class="event-info">
-          <span class="fa fa-calendar"></span>
-          <span class="event-row">{{ event.date | date: "%-d %B %Y @ %I:%M%P" }}</span>
-          <span class="fa fa-map-marker"></span>
-          <span class="event-row">{{ event.location }}</span>
-          <span class="fa fa-info-circle"></span>
-          <input type="checkbox" class="read-more" id="event-read-{{ forloop.index }}" hidden>
-          <span class="event-row excerpt">{{ event.description | truncatewords: 25 }}</span>
-          <span class="event-row desc">{{ event.description }}</span>
-          <span></span><label for="event-read-{{ forloop.index }}">Read</label>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
   </div>
 
 </div>

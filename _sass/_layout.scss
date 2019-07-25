@@ -35,11 +35,8 @@ body div.home {
 
   .intro-message {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 80px;
-    padding: 5vw;
+    margin-bottom: 40px;
+    padding: 3vw;
     @extend %headliner-type;
     font-size: 5vw;
     white-space: nowrap;
@@ -47,16 +44,17 @@ body div.home {
     border: 0.4vw solid;
     border-radius: 0.2vw;
 
+    & > div::first-letter { color: desaturate(#db2828, 30%); }
     & > .intro-image {
       z-index: -1;
       position: absolute;
-      top: 5%; right: 20%; left: 20%; bottom: 5%;
+      top: 0; right: 0; left: 45%; bottom: 0;
       background: url('/images/performance-f16.png');
       background-size: 80%;
       background-repeat: no-repeat;
       background-position-x: 50%;
       background-position-y: 50%;
-      filter: brightness(90%) grayscale(50%) contrast(60%) saturate(150%);
+      filter: brightness(80%) grayscale(100%) contrast(70%) saturate(150%);
     }
   }
 
@@ -126,6 +124,7 @@ body div.home {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 20px;
   justify-items: center;
+  margin-bottom: 40px;
 
   & > h1 {
     grid-column: 1 / -1;
@@ -207,6 +206,9 @@ body div.home {
     letter-spacing: 1px;
     @extend %no-select;
   }
+  & .event + h2 { // "Past Events"
+    margin-top: 50px;
+  }
   & .event-info {
     display: grid;
     grid-template-columns: 30px auto;
@@ -229,6 +231,11 @@ body div.home {
     & .read-more:checked ~ .event-row.desc { display: block; }
     & .read-more:checked ~ .event-row.excerpt { display: none; }
     & .read-more:checked ~ label::after { content: ' less'; }
+    & .event-row p {
+      margin: 0;
+      margin-block-start: 0;
+      margin-block-end: 0;
+    }
   }
 }
 
