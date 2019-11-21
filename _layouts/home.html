@@ -29,10 +29,10 @@ layout: default
           <span class="fa fa-map-marker"></span>
           <span class="event-row">{{ event.location }}</span>
           <span class="fa fa-info-circle"></span>
-          <input type="checkbox" class="read-more" id="event-read-{{ forloop.index }}" hidden>
-          <span class="event-row excerpt">{{ event.description | truncatewords: 25 | markdownify }}</span>
+          <input type="checkbox" class="read-more" id="event-unread-{{ forloop.index }}" hidden>
+          <span class="event-row excerpt" aria-hidden="true">{{ event.description | truncatewords: 25 | markdownify }}</span>
           <span class="event-row desc">{{ event.description | markdownify }}</span>
-          <span></span><label for="event-read-{{ forloop.index }}">Read</label>
+          <span></span><label for="event-unread-{{ forloop.index }}">Read</label>
         </div>
       </div>
       {% endfor %}
@@ -50,7 +50,7 @@ layout: default
           <span class="event-row">{{ event.location }}</span>
           <span class="fa fa-info-circle"></span>
           <input type="checkbox" class="read-more" id="event-read-{{ forloop.index }}" hidden>
-          <span class="event-row excerpt">{{ event.description | truncatewords: 25 | markdownify }}</span>
+          <span class="event-row excerpt" aria-hidden="true">{{ event.description | truncatewords: 25 | markdownify }}</span>
           <span class="event-row desc">{{ event.description | markdownify }}</span>
           <span></span><label for="event-read-{{ forloop.index }}">Read</label>
         </div>
