@@ -16,10 +16,7 @@ layout: default
     <div class="event-list upcoming">
       {% assign upcoming_events = site.data.events | where_exp: 'event', 'event.date > site.time' | sort: 'date' | reverse %}
       <h1>Upcoming Events</h1>
-      <p>Are you performing with us in an upcoming event and looking for the necessary software?</p>
-      <a class="primary-btn" href="{{ '/projects.html' | absolute_url }}">
-        Download Now
-      </a>
+      
       {% for event in upcoming_events %}
       <div class="event">
         <h2>{{ event.title }}</h2>
@@ -71,11 +68,10 @@ layout: default
           <p>
             We are a contemporary “laptop orchestra”, but our broader title
             encapsulates our music technology research and classic ensemble
-            instrumentation.
+            instrumentation. A significant area of focus for LUTE is outreach, accessibility, and inclusive music-making in shared spaces.
           </p>
           <p>
-            We actively perform on and off campus, check out our upcoming
-            performances below.
+            LUTE will be, as of fall 2024, an official ensemble for credit at LUC, offered jointly by the Department of Fine and Performing Arts and the Department Computer Science under MUSC/COMP 112.
           </p>
         </span>
       </div>
@@ -88,18 +84,10 @@ layout: default
         <span class="callout-title">Our Tech</span>
         <span class="callout-message">
           <p>
-            Our <a href='{{ '/in-c' | absolute_url }}'>In C</a> app enables
-            the performance of Terry Riley's minimalist standard <i>In C</i>
-            regardless of the musical experience.  It is currently being
-            developed into a web app.
+            We design our own interactive apps for musical performance in an ensemble or play-along environment. So far, most of this development has been devoted to a play-along version of Terry Riley's <i>In C</i> (1964). New projects are emerging in our labs that leverage the user-friendly platform we have created for new musical experiences. We are most interested in developing systems for improvisation, group composition, "game-ified" music, and adaptive systems for maximum accessibility. Find our work on GitHub at <a href='https://github.com/loyola-university-tech-ensemble'>https://github.com/loyola-university-tech-ensemble</a>
           </p>
           <p>
-            The app also pairs well with the <a href='https://github.com/loyola-university-tech-ensemble/in-c-score-progress'>Progress
-              Viewer</a>, designed to visualize the current progress of an In C
-            performance typically with a projector.
-          </p>
-          <p>
-            Still curious? All of our software projects are available <a href="{{ 'projects' | absolute_url }}">here</a>.
+            All of our software projects are available <a href="{{ 'projects' | absolute_url }}">here</a>.
         </span>
       </div>
     </div>
