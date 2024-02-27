@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "In C for Mobile: Workshop at upcoming Web Audio Conference"
+date:   2024-02-26 21:40:59 -0600
+image: "covers/InCApp.png"
+categories: update
+---
+
+We've been invited to present a workshop at this year's Web Audio Conference (WAC 2024) at Purdue University, March 15-18, 2024. We are presenting our new mobile web app implementation of _In C!_ This version replaces the Max-based stand-alone app we used for our previous readings and public play-along experiences. Once again, this app is the result of collaboration with students in LUC's COMP/MUSC 122 Intro to Digital Music. Since we began this journey, this course has been transformed into an exploration of digital music through the lens of data objects, experimentation, and accessibilty of musical tools through Web Audio and other online technologies that enable creativity. We are very excited to share these latest developments with the WAC 24 community.
+
+## Conference Abstract
+
+This workshop presents a mobile-friendly Web Audio application for a “technology ensemble play-along” of Terry Riley’s 1964 composition In C. (lute.luc.edu/InC) Attendees will participate using web-enabled devices as musical instruments. We hope to demonstrate an accessible music-technology experience that relies on face-to-face interaction within a shared space. In this all-electronic implementation, no special musical or technical expertise is required.
+
+## App Highlights
+
+The latest version of our app implements most of the features called for by the composer. Participants can use the app to play individual patterns at will and progress through the sequence of 53 patterns. Furthermore, the app gives the player the ability to effortlessly play in time with others (a sync feature helps align each player's metronome with the group, and the player module automatically aligns pattern playback with the next available downbeat). A loop button is provided to start a given pattern repeating indefinitely. Patterns can play half speed (rhythmic augmentation) and/or delayed rhythmically by an eighth note. Users can shift a pattern up or down by 1-3 octaves. Finally, the app features a limited (but growing) menu of synth voices so that players can defferentiate their sound from others in the group. The app uses Tone.js for transport, sequencing, and synthesis and P5.js for graphics.
+
+
+[InC Web App]: https://lute.luc.edu/InC
+[inC]: https://en.wikipedia.org/wiki/In_C
+[comp122]: http://courses.cs.luc.edu/html/comp122.html
